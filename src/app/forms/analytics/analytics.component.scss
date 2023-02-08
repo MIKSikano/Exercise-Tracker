@@ -1,0 +1,28 @@
+.parent {
+    display: flex;
+}
+
+.child01 {
+    flex-basis: 50%;
+    margin-left: 20px;
+}
+  
+.child02 {
+    flex-basis: 50%;
+}
+
+h1 {
+    font-size: 105px;
+}
+
+h2 {
+    margin: 10px;
+}
+
+h3 {
+    font-size: 60px;
+}
+
+h6 {
+    font-size: 15px;
+}

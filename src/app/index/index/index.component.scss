@@ -1,0 +1,19 @@
+// .container {
+//     left      : 50%;
+//     top       : 50%;
+//     position  : absolute;
+//     transform : translate(-50%, -50%);
+// }
+
+.parent {
+    display: flex;
+}
+
+.child01 {
+    flex-basis: 50%;
+    margin-right: 30px ;
+}
+  
+.child02 {
+    flex-basis: 50%;
+}
