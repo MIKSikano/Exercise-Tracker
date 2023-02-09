@@ -2,8 +2,8 @@ export interface ExerciseData {
     Id?: number,
     CaloriesBurned: number,
     CaloriesBurnedGoal: number,
-    ExerciseTypeId : number,
-    WorkoutRecordId : number,
+    ExerciseTypeId? : number,
+    WorkoutRecordId? : number,
 }
 
 // public int Id {get; set;}

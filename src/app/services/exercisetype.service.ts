@@ -37,4 +37,13 @@ export class ExercisetypeService {
     }
     return item
   }
+
+  GetLatest = (): Observable<ExerciseType> => {
+    let exerciseType: Observable<ExerciseType>
+    exerciseType = this.http.get<ExerciseType>(`${this.baseUrl}/exercise_type/latest`, httpOptions)
+    console.log("Get All Working")
+    console.log(exerciseType)
+    return exerciseType
+  }
+
 }

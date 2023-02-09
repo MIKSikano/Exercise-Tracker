@@ -23,4 +23,24 @@ export class WorkoutrecordService {
     console.log(workoutRecord)
     return workoutRecord
   }
+
+  Save = (workoutRecord: WorkoutRecord): Observable<WorkoutRecord> => {
+    let item: Observable<WorkoutRecord>
+    if (workoutRecord.Id) {
+      //Perform Update: Put /exercise.id data
+      const url = `${this.baseUrl}/workout_record/${workoutRecord.Id}`
+      item = this.http.put<WorkoutRecord>(url, workoutRecord, httpOptions)
+    } else {
+      // perform Create: POST /exercises
+      item = this.http.post<WorkoutRecord>(`${this.baseUrl}/workout_record`, workoutRecord, httpOptions)
+    }
+    return item
+  }
+
+  GetLatest = (): Observable<WorkoutRecord> => {
+    let workoutRecord: Observable<WorkoutRecord>
+    workoutRecord = this.http.get<WorkoutRecord>(`${this.baseUrl}/workout_record/latest`, httpOptions)
+    console.log(workoutRecord)
+    return workoutRecord
+  }
 }

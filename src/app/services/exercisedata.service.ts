@@ -24,5 +24,16 @@ export class ExercisedataService {
     return exerciseData
   }
 
- 
+  Save = (exerciseData: ExerciseData): Observable<ExerciseData> => {
+    let item: Observable<ExerciseData>
+    if (exerciseData.Id) {
+      //Perform Update: Put /exercise.id data
+      const url = `${this.baseUrl}/exercise_data/${exerciseData.Id}`
+      item = this.http.put<ExerciseData>(url, exerciseData, httpOptions)
+    } else {
+      // perform Create: POST /exercises
+      item = this.http.post<ExerciseData>(`${this.baseUrl}/exercise_data`, exerciseData, httpOptions)
+    }
+    return item
+  }
 }

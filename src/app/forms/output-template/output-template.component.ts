@@ -13,17 +13,22 @@ import { WorkoutrecordService } from 'src/app/services/workoutrecord.service';
 })
 export class OutputTemplateComponent {
 
-  exerciseData: ExerciseData[] = [];
+  exerciseDataList : ExerciseData[] = []
+  exerciseData: ExerciseData = {
+    CaloriesBurned : 0,
+    CaloriesBurnedGoal : 0,
+
+  }
   exerciseType: ExerciseType[] = [];
   workoutRecord: WorkoutRecord[] = [];
 
-  constructor(private exerciseDataService: ExercisedataService, private exerciseTypeService: ExercisetypeService, private workoutRecordService : WorkoutrecordService) {}
+  constructor(private exerciseDataService: ExercisedataService, private exerciseTypeService: ExercisetypeService, private workoutRecordService : WorkoutrecordService,) {}
 
   ngOnInit(): void {
     console.log("ngOnit Fired!")
 
     this.exerciseDataService.GetAll().subscribe((exerciseData) => {
-      this.exerciseData = exerciseData
+      this.exerciseDataList = exerciseData
     })
 
     this.exerciseTypeService.GetAll().subscribe((exerciseType) => {
