@@ -1,39 +1,42 @@
 <div class="card-body">
     <div class="row">
-        <div class="col-2">
+        <div class="col-2" *ngFor="let type of exerciseType">
             <div class="form-group">
                 <label>Exercise Type</label>
-                <h6>Cycling</h6>
+                <h6>{{type.ExerciseName}}</h6>
             </div>
         </div>
 
-        <div class="col-2">
-            <div class="form-group">
-                <label>Date</label>
-                <h6>02/08/2023</h6>
+        <div>
+            <div class="col-2">
+                <div class="form-group">
+                    <label>Date</label>
+                    <h6></h6>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="form-group">
+                    <label>Start Time</label>
+                    <h6></h6>
+                    <!-- <input type="text" class="form-control" disabled>  -->
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="form-group">
+                    <label>End Time</label>
+                    <h6></h6>
+                    <!-- <input type="text" class="form-control" disabled> -->
+                </div>
             </div>
         </div>
 
-        <div class="col-2">
-            <div class="form-group">
-                <label>Start Time</label>
-                <h6>12:00</h6>
-                <!-- <input type="text" class="form-control" disabled>  -->
-            </div>
-        </div>
-
-        <div class="col-2">
-            <div class="form-group">
-                <label>End Time</label>
-                <h6>13:00</h6>
-                <!-- <input type="text" class="form-control" disabled> -->
-            </div>
-        </div>
 
         <div class="col-2">
             <div class="form-group">
                 <label>Calories Burned</label>
-                <h6>500</h6>
+                <h6></h6>
                 <!-- <input type="text" class="form-control" disabled> -->
             </div>
         </div>
@@ -41,7 +44,7 @@
         <div class="col-2">
             <div class="form-group">
                 <label>Calories Goal</label>
-                <h6>450</h6>
+                <h6></h6>
                 <!-- <input type="text" class="form-control" disabled> -->
             </div>
         </div>

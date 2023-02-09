@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { InputComponent } from './forms/input/input.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AnalyticsComponent } from './forms/analytics/analytics.component';
 import { IndexComponent } from './index/index/index.component';
 import { OutputShowComponent } from './forms/output-show/output-show.component';
@@ -20,7 +20,8 @@ import { OutputTemplateComponent } from './forms/output-template/output-template
     OutputTemplateComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
