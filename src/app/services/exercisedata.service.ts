@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { ExerciseData } from 'models/ExerciseData';
+import { ExerciseType } from 'models/ExerciseType';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -22,4 +23,6 @@ export class ExercisedataService {
     exerciseData = this.http.get<ExerciseData[]>(`${this.baseUrl}/exercise_data`, httpOptions)
     return exerciseData
   }
+
+ 
 }

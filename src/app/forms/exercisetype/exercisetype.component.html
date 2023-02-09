@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+        <div class="card form-group">
+            
+            <select class="form-select" [(ngModel)]="exerciseType.ExerciseName" required>
+                <option selected>Type of Exercise</option>
+                <option value="Treadmill">Treadmill</option>
+                <option value="Bicycle">Bicycle</option>
+            </select>
+            <label class="mt-4" for="">Description</label>
+            <input type="text" class="form-control" [(ngModel)]="exerciseType.ExerciseDescription" required>
+        </div>
+        <button type="button" class="btn btn-primary mt-2" routerLink="/workout-record" (click)="SaveExerciseType()">Save Exercise Type</button>
+    </div>
+    <div class="col"></div>
+</div>
+
