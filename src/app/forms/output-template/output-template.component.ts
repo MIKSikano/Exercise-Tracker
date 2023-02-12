@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ExerciseData } from 'models/ExerciseData';
 import { ExerciseType } from 'models/ExerciseType';
 import { WorkoutRecord } from 'models/WorkoutRecord';
@@ -13,6 +13,8 @@ import { WorkoutrecordService } from 'src/app/services/workoutrecord.service';
 })
 export class OutputTemplateComponent {
 
+  @Input() eShow: ExerciseData;
+  
   exerciseDataList : ExerciseData[] = []
   exerciseData: ExerciseData = {
     CaloriesBurned : 0,
