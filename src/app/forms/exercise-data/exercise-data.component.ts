@@ -47,6 +47,7 @@ export class ExerciseDataComponent {
     console.log(d);
     this.exerciseDataService.Save(d).subscribe((data) => {
       this.formEvent.emit(data)
+  
     });
   }
 

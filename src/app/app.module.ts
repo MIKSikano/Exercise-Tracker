@@ -14,6 +14,9 @@ import { ExercisetypeComponent } from './forms/exercisetype/exercisetype.compone
 import { HeaderComponent } from './sections/header/header.component';
 import { WorkoutrecordComponent } from './forms/workoutrecord/workoutrecord.component';
 import { ExerciseDataComponent } from './forms/exercise-data/exercise-data.component';
+import { OutputDataComponent } from './forms/output-show/output-data/output-data/output-data.component';
+
+
 
 const appRoutes: Routes = [{ path: '', component: IndexComponent },
 { path: 'exercise-type', component: ExercisetypeComponent },
@@ -31,7 +34,8 @@ const appRoutes: Routes = [{ path: '', component: IndexComponent },
     ExercisetypeComponent,
     HeaderComponent,
     WorkoutrecordComponent,
-    ExerciseDataComponent
+    ExerciseDataComponent,
+    OutputDataComponent,
   ],
   imports: [
     BrowserModule,

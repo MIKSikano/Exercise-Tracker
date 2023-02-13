@@ -10,22 +10,22 @@ import { ExercisetypeService } from 'src/app/services/exercisetype.service';
 })
 
 export class ExercisetypeComponent {
-  constructor(private exerciseTypeService : ExercisetypeService) {
+  constructor(private exerciseTypeService: ExercisetypeService) {
   }
-      exerciseType : ExerciseType = {
-        ExerciseName : '',
-        ExerciseDescription : ''
-      }
+  exerciseType: ExerciseType = {
+    ExerciseName: '',
+    ExerciseDescription: ''
+  }
 
-      @Output() formEvent: EventEmitter<ExerciseType> = new EventEmitter<ExerciseType>();
-      
-      SaveExerciseType = () => {
-        console.log("Exercise Type Entered!")
-        let t = {...this.exerciseType}
-        this.exerciseTypeService.Save(t).subscribe((type)=>{
-          this.formEvent.emit(type)
-        });
-      }
+  @Output() formEvent: EventEmitter<ExerciseType> = new EventEmitter<ExerciseType>();
+
+  SaveExerciseType = () => {
+    console.log("Exercise Type Entered!")
+    let t = { ...this.exerciseType }
+    this.exerciseTypeService.Save(t).subscribe((type) => {
+      this.formEvent.emit(type)
+    });
+  }
 }
 
 

@@ -1,23 +1,11 @@
-<div class="row">
-    <div class="col"></div>
-
-    <div class="col">
-        <div class="form-group">
-            <label>Calories Burned</label>
-            <input type="number" class="form-control" [(ngModel)]="exerciseData.CaloriesBurned" required>
-        </div>
-
-        <div class="mt-3"></div>
-
-        <div class="form-group">
-            <label>Calories Burned Goal</label>
-            <input type="number" class="form-control" [(ngModel)]="exerciseData.CaloriesBurnedGoal">
-        </div>
+<div class="container">
+    <div class="Container1">
+        <label>Calories Burned</label>
+        <input type="number" class="form-control" [(ngModel)]="exerciseData.CaloriesBurned" required>
+        <label>Calories Burned Goal</label>
+        <input type="number" class="form-control" [(ngModel)]="exerciseData.CaloriesBurnedGoal">
         <button type="button" class="btn btn-primary mt-2" (click)="SaveExerciseData()">Save Exercise Data</button>
-        <div class="mt-3"></div>
-        
-        <app-output-template></app-output-template>
+        <app-output-show></app-output-show>
     </div>
-
-    <div class="col"></div>
+  
 </div>

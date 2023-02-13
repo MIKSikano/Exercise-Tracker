@@ -20,6 +20,7 @@ export class WorkoutrecordService {
   GetAll = (): Observable<WorkoutRecord[]> => {
     let workoutRecord: Observable<WorkoutRecord[]>
     workoutRecord = this.http.get<WorkoutRecord[]>(`${this.baseUrl}/workout_record`, httpOptions)
+    console.log("Get All Workout Record Working!")
     console.log(workoutRecord)
     return workoutRecord
   }
@@ -40,6 +41,7 @@ export class WorkoutrecordService {
   GetLatest = (): Observable<WorkoutRecord> => {
     let workoutRecord: Observable<WorkoutRecord>
     workoutRecord = this.http.get<WorkoutRecord>(`${this.baseUrl}/workout_record/latest`, httpOptions)
+    console.log("Get Latest Workout Record Working!")
     console.log(workoutRecord)
     return workoutRecord
   }
