@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ExerciseData } from 'models/ExerciseData';
 
+
 import { ExerciseType } from 'models/ExerciseType';
 import { WorkoutRecord } from 'models/WorkoutRecord';
 import { ExercisedataService } from 'src/app/services/exercisedata.service';
@@ -18,15 +19,12 @@ export class OutputDataComponent{
   
 
 
-  // exerciseData: ExerciseData = {
-  //   CaloriesBurned: 0,
-  //   CaloriesBurnedGoal: 0,
 
-  // }
 
   exerciseDataList: ExerciseData[] = []
   exerciseType: ExerciseType[] = [];
   workoutRecord: WorkoutRecord[] = [];
+ 
  
 
   constructor(private exerciseDataService: ExercisedataService, private exerciseTypeService: ExercisetypeService, private workoutRecordService: WorkoutrecordService) { }
@@ -51,6 +49,8 @@ export class OutputDataComponent{
       this.workoutRecord = workoutRecord;
       console.log(this.workoutRecord)
     })
+
+  
 
     
   }
